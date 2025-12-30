@@ -7,6 +7,7 @@ import meta from "../assets/images/certs/meta.jpg";
 import python from "../assets/images/certs/python.jpg";
 import google from "../assets/images/certs/googleessentials.jpg";
 import aspireLetter from "../assets/images/certs/aspireLetter.jpg";
+import CV from "../assets/images/certs/CV.jpg";
 
 const certificationsData = [
     {
@@ -17,6 +18,15 @@ const certificationsData = [
         year: "2024",
         image: nftp,
         verifyLink: "https://nftp.pitb.gov.pk/",
+    },
+     {
+        title: "Introduction to Computer Vision",
+        description:
+            "Gained hands-on experience with Computer Vision, approaches to computer vision-pixel intensity histograms, CNN, digital images and pixels-analog to digital images, pixel neighborhood, different tasks in Computer Vision like classification, classification and localization, object detection, instance segmentation",
+        issuer: "Great Learning",
+        year: "2025",
+        image: CV,
+        verifyLink: "https://www.mygreatlearning.com/certificate/IWVBNVVE",
     },
     {
         title: "Google Data Analytics",
