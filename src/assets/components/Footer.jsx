@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
-        <h3>© {new Date().getFullYear()} Abdullah | Computer Science | Microsoft Learn Student Ambassador</h3>
+        <h3>© {new Date().getFullYear()} Abdullah | Computer Science Student | Microsoft Student Ambassador</h3>
         <p>Building technology that empowers and inspires future innovators</p>
 
         <div className="footer-socials">
@@ -23,7 +23,7 @@ export default function Footer() {
         </div>
         
         <div className="footer-copy">
-          <p>Designed & Built by Abdullah</p>
+          <p>Designed & Built by Abdullah Khan</p>
         </div>
       </div>
     </footer>

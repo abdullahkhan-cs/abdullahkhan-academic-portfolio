@@ -80,5 +80,4 @@ const activitiesData = [
         link: "https://www.linkedin.com/posts/society-of-coder-s_introducing-the-team-of-society-of-coders-activity-7260365100358770688-wFRK?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEIMBa0BgghCpTgM0V8ndhkZMcz-0qPc-PE"
     }
 ];
-
 export default activitiesData;
