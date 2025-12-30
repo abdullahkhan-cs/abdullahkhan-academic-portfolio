@@ -14,19 +14,16 @@ export default function Hero() {
   return (
     <section id="home" className="hero">
       {/* Animated Background Blobs */}
-      <div className="background-blobs">
-        <div className="blob blob1"></div>
-        <div className="blob blob2"></div>
-      </div>
+      {/* Background Blobs Removed for Classic Theme */}
 
       <div className="hero-container">
         {/* Hero Text */}
         <div className="hero-text">
           <h1 className="fade-in">
-            Hi, I’m <span>Abdullah Khan</span>
+            Hi, I’m <span>Abdullah</span>
           </h1>
           <h2 className="slide-up">
-            Software Developer | Aspire Leaders Alumnus | Researcher | MLSA
+            Software Developer | Aspire Leaders Alumnus | Researcher | Microsoft Student Ambassador
           </h2>
           <p className="fade-in-delay">
             I may not be the smartest, the most knowledgeable, or the most experienced in any particular field, but I am someone who is always eager to seize new opportunities and is driven by ambition. Thank you for visiting the Abdullah Portfolio, which highlights key moments from my academic and career journey. While I may not know who you are, I'm delighted that you've stopped by to explore my profiles and stories.

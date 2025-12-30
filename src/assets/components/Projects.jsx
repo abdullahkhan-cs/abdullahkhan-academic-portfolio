@@ -10,10 +10,7 @@ export default function Projects({ showAll = false }) {
   return (
     <section id="projects" className="projects-section">
       {/* Background Blobs */}
-      <div className="background-blobs">
-        <div className="blob blob1"></div>
-        <div className="blob blob2"></div>
-      </div>
+      {/* Background Blobs Removed for Classic Theme */}
 
       <div className="projects-container">
         <h2 className="fade-in">Featured Projects</h2>

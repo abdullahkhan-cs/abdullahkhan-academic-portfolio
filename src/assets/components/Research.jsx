@@ -8,11 +8,7 @@ export default function Research({ showAll = false }) {
 
   return (
     <section id="research" className="research-section">
-      <div className="background-blobs">
-        <div className="blob blob1"></div>
-        <div className="blob blob2"></div>
-        <div className="blob blob3"></div>
-      </div>
+      {/* Background Blobs Removed for Classic Theme */}
 
       <div className="research-container">
         <h2 className="fade-in">Research Publications</h2>

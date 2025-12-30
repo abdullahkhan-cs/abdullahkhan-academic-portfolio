@@ -5,28 +5,10 @@ import "./navbar.css";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState("home");
   const navigate = useNavigate();
   const location = useLocation();
-
-  // Load theme
-  useEffect(() => {
-    const theme = localStorage.getItem("theme");
-    if (theme === "dark") setDarkMode(true);
-  }, []);
-
-  // Apply theme
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
-  }, [darkMode]);
 
   // Scroll effect
   useEffect(() => {
@@ -101,18 +83,11 @@ export default function Navbar() {
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
       <div className="nav-container">
-        {/* Brand + Theme */}
+        {/* Brand */}
         <div className="brand-wrapper">
           <span className="brand" onClick={goHome}>
-            Abdullah
+            Abdullah Khan
           </span>
-          <button
-            className="theme-toggle"
-            onClick={() => setDarkMode(!darkMode)}
-            aria-label="Toggle Theme"
-          >
-            {darkMode ? "🌙" : "☀️"}
-          </button>
         </div>
 
         {/* Navigation */}

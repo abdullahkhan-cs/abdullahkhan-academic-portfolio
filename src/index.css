@@ -1,50 +1,34 @@
 /* src/index.css */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap');
 
 :root {
-    /* 🎨 Color Palette - Light Mode */
-    --bg-primary: #f8fafc;
-    --bg-secondary: #ffffff;
-    --bg-glass: rgba(255, 255, 255, 0.7);
+    /* 🎨 Color Palette - Classic Light */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f9f9f9;
+    --bg-glass: #ffffff;
+    /* Solid for classic look */
 
-    --text-primary: #0f172a;
-    --text-secondary: #475569;
-    --text-accent: #0ea5e9;
+    --text-primary: #333333;
+    --text-secondary: #555555;
+    --text-accent: #2c3e50;
 
-    --primary: #0ea5e9;
-    --primary-hover: #0284c7;
-    --secondary: #64748b;
+    --primary: #2c3e50;
+    /* Classic Navy */
+    --primary-hover: #1a252f;
+    --secondary: #7f8c8d;
 
-    --border-color: #e2e8f0;
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    --shadow-glow: 0 0 20px rgba(14, 165, 233, 0.3);
+    --border-color: #dddddd;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --shadow-glow: none;
+    /* No glow for classic */
 
-    --font-main: 'Outfit', sans-serif;
-    --font-display: 'Space Grotesk', sans-serif;
+    --font-main: 'Source Sans Pro', 'Arial', sans-serif;
+    --font-display: 'Libre Baskerville', 'Georgia', serif;
 }
 
-.dark {
-    /* 🌑 Color Palette - Dark Mode */
-    --bg-primary: #0f172a;
-    --bg-secondary: #1e293b;
-    --bg-glass: rgba(15, 23, 42, 0.7);
 
-    --text-primary: #f8fafc;
-    --text-secondary: #94a3b8;
-    --text-accent: #38bdf8;
-
-    --primary: #38bdf8;
-    --primary-hover: #0ea5e9;
-    --secondary: #94a3b8;
-
-    --border-color: #334155;
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.3);
-    --shadow-glow: 0 0 25px rgba(56, 189, 248, 0.2);
-}
 
 * {
     box-sizing: border-box;
@@ -73,7 +57,8 @@ h5,
 h6 {
     font-family: var(--font-display);
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.3;
+    color: var(--text-primary);
 }
 
 a {
@@ -89,27 +74,26 @@ button {
 
 /* ✨ Utility Classes */
 .container {
-    max-width: 1200px;
+    max-width: 1100px;
+    /* Slightly narrower for classic read measure */
     margin: 0 auto;
     padding: 0 2rem;
 }
 
 .glass {
-    background: var(--bg-glass);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: var(--bg-secondary);
     border: 1px solid var(--border-color);
 }
 
 .section-padding {
-    padding: 5rem 0;
+    padding: 4rem 0;
 }
 
-/* 🎭 Animations */
+/* 🎭 Animations - Simplified */
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(10px);
     }
 
     to {
@@ -119,7 +103,7 @@ button {
 }
 
 .fade-in {
-    animation: fadeIn 0.8s ease-out forwards;
+    animation: fadeIn 0.6s ease-out forwards;
 }
 
 .delay-100 {
@@ -134,9 +118,9 @@ button {
     animation-delay: 0.3s;
 }
 
-/* Scrollbar */
+/* Scrollbar - Clean */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -144,10 +128,10 @@ button {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--border-color);
-    border-radius: 5px;
+    background: #ccc;
+    border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--text-secondary);
+    background: #bbb;
 }

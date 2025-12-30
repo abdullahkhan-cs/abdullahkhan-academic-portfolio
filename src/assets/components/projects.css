@@ -3,14 +3,16 @@
   padding: 80px 20px;
   position: relative;
   background: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .projects-container {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
 .projects-container h2 {
+  font-family: var(--font-display);
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 3rem;
@@ -19,23 +21,20 @@
   display: inline-block;
   left: 50%;
   transform: translateX(-50%);
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 10px;
 }
 
+/* Remove ::after line */
 .projects-container h2::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: var(--primary);
-  border-radius: 2px;
+  content: none;
 }
 
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
+  gap: 2.5rem;
+  /* More breathing room */
 }
 
 @media (max-width: 768px) {
@@ -45,9 +44,11 @@
 }
 
 .project-card {
-  background: var(--bg-secondary);
+  background: var(--bg-primary);
+  /* Use primary white, not secondary gray usually */
   border: 1px solid var(--border-color);
-  border-radius: 16px;
+  border-radius: 4px;
+  /* Classic slight rounded */
   padding: 2rem;
   transition: all 0.3s ease;
   display: flex;
@@ -55,15 +56,18 @@
   justify-content: space-between;
   position: relative;
   overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  /* Subtle */
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
   border-color: var(--primary);
 }
 
 .project-card h3 {
+  font-family: var(--font-display);
   font-size: 1.5rem;
   margin-bottom: 1rem;
   color: var(--text-primary);
@@ -73,6 +77,7 @@
   color: var(--text-secondary);
   margin-bottom: 1.5rem;
   line-height: 1.6;
+  font-family: var(--font-main);
 }
 
 .card-footer {
@@ -88,30 +93,39 @@
 
 .tool-tag {
   font-size: 0.85rem;
-  padding: 0.4rem 0.8rem;
-  background: var(--bg-primary);
-  color: var(--primary);
-  border-radius: 20px;
-  font-weight: 500;
-  border: 1px solid var(--border-color);
+  padding: 0.3rem 0.6rem;
+  background: var(--bg-secondary);
+  /* Very light gray */
+  color: var(--text-secondary);
+  border-radius: 4px;
+  font-weight: 400;
+  border: 1px solid #e0e0e0;
+  font-family: monospace;
+  /* Technical feel */
 }
 
+/* Light/Classic Button Style */
 .btn-view {
   display: inline-block;
   padding: 0.8rem 1.5rem;
-  background: var(--primary);
-  color: white;
-  border-radius: 8px;
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 4px;
   font-weight: 600;
   transition: all 0.3s ease;
   text-align: center;
   width: 100%;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
 }
 
 .btn-view:hover {
-  background: var(--primary-hover);
+  background: var(--primary);
+  color: white;
   transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  box-shadow: none;
 }
 
 .view-all-container {
@@ -123,17 +137,21 @@
   display: inline-block;
   padding: 1rem 2.5rem;
   background: transparent;
-  border: 2px solid var(--primary);
-  color: var(--primary);
-  border-radius: 50px;
+  border: 1px solid var(--text-secondary);
+  color: var(--text-primary);
+  border-radius: 4px;
+  /* Classic */
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1rem;
   transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .btn-view-all:hover {
   background: var(--primary);
   color: white;
+  border-color: var(--primary);
   transform: translateY(-3px);
-  box-shadow: var(--shadow-glow);
+  box-shadow: none;
 }
