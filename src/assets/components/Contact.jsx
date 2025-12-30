@@ -1,21 +1,58 @@
 // src/assets/components/Contact.jsx
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import "./contact.css";
 
 export default function Contact() {
+  const form = useRef();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
+  const [isSending, setIsSending] = useState(false);
+
+  // ⚠️ IMPORTANT:
+  // You must sign up at https://www.emailjs.com/
+  // and get your Service ID, Template ID, and Public Key.
+  // Then replace the placeholders below.
+  const SERVICE_ID = "service_tfgnxie"; // e.g. "service_x8d3s"
+  const TEMPLATE_ID = "template_gn9765z"; // e.g. "template_8ds2"
+  const PUBLIC_KEY = "esE1Bc7ET59FFD4C_"; // e.g. "user_12345"
 
   const handleChange = (e) =>
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Thanks for reaching out — form not connected yet!");
-    setFormData({ name: "", email: "", message: "" });
+    setIsSending(true);
+
+    // If using the placeholder keys, show a mock success (for demo) but alert user
+    if (SERVICE_ID === "service_placeholder") {
+      alert(
+        "EmailJS keys are missing! \nPlease open 'src/assets/components/Contact.jsx' and add your Service ID, Template ID, and Public Key to make this work."
+      );
+      setIsSending(false);
+      return;
+    }
+
+    emailjs
+      .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, {
+        publicKey: PUBLIC_KEY,
+      })
+      .then(
+        () => {
+          alert("Message sent successfully! I'll get back to you soon.");
+          setFormData({ name: "", email: "", message: "" });
+        },
+        (error) => {
+          console.error("FAILED...", error.text);
+          alert("Failed to send message. Please try again or contact via LinkedIn.");
+        }
+      )
+      .finally(() => {
+        setIsSending(false);
+      });
   };
 
   return (
@@ -66,7 +103,7 @@ export default function Contact() {
           </div>
 
           {/* Contact Form */}
-          <form onSubmit={handleSubmit} className="contact-form">
+          <form ref={form} onSubmit={handleSubmit} className="contact-form">
             <input
               name="name"
               placeholder="Your Name"
@@ -89,7 +126,9 @@ export default function Contact() {
               onChange={handleChange}
               required
             />
-            <button type="submit">Send Message</button>
+            <button type="submit" disabled={isSending}>
+              {isSending ? "Sending..." : "Send Message"}
+            </button>
           </form>
         </div>
       </div>
