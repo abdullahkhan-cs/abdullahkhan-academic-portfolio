@@ -28,6 +28,8 @@ export default function Navbar() {
       setActive("certifications");
     } else if (location.pathname === "/all-research") {
       setActive("research");
+    } else if (location.pathname === "/all-activities") {
+      setActive("activities");
     } else if (location.pathname === "/") {
       // Only track sections on home page
       const sections = document.querySelectorAll("section[id]");
@@ -95,7 +97,7 @@ export default function Navbar() {
           id="primary-navigation"
           className={`nav-links ${open ? "open" : ""}`}
         >
-          {["home", "projects", "research", "certifications", "contact"].map((id) => (
+          {["home", "projects", "research", "certifications", "activities", "contact"].map((id) => (
             <span
               key={id}
               onClick={() => scrollToSection(id)}

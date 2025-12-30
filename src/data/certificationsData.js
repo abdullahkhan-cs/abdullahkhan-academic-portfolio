@@ -10,35 +10,6 @@ import aspireLetter from "../assets/images/certs/aspireLetter.jpg";
 
 const certificationsData = [
     {
-        title: "Microsoft Learn Student Ambassador (MLSA)",
-        description:
-            "Engaged in global tech community initiatives, organized events, and promoted Microsoft technologies to empower student learning.",
-        issuer: "Microsoft Learn Student Program",
-        year: "Ongoing",
-        image: mlsa,
-        verifyLink:
-            "https://mvp.microsoft.com/en-US/studentambassadors/profile/cce452b6-52a6-48fd-bd5e-0ca27a0664b8",
-    },
-    {
-        title: "Aspires Leadership Program Alumni",
-        description:
-            "Completed a selective leadership development program and mentored peers in innovation and personal growth.",
-        issuer: "Aspire Institute",
-        year: "2025",
-        image: aspire,
-        verifyLink:
-            "https://www.aspireleaders.org/program/aspire-leaders-program/",
-    },
-    {
-        title: "Aspire Institute Acknowledgement Letter",
-        description:
-            "Learned the fundamentals of AI, including machine learning, neural networks, and ethical AI practices.",
-        issuer: "Aspire Institute",
-        year: "2025",
-        image: aspireLetter,
-        verifyLink: "https://www.aspireleaders.org/program/aspire-leaders-program/",
-    },
-    {
         title: "National Freelance Training Program (NFTP)",
         description:
             "Trained in professional freelancing skills and project delivery under the Punjab Information Technology Board (PITB) at Quaid-e-Awam University.",
@@ -82,6 +53,35 @@ const certificationsData = [
         year: "2025",
         image: google,
         verifyLink: "https://coursera.org/verify/specialization/3J3PM9E5GE7K",
+    },
+    {
+        title: "Microsoft Learn Student Ambassador (MLSA)",
+        description:
+            "Engaged in global tech community initiatives, organized events, and promoted Microsoft technologies to empower student learning.",
+        issuer: "Microsoft Learn Student Program",
+        year: "Ongoing",
+        image: mlsa,
+        verifyLink:
+            "https://mvp.microsoft.com/en-US/studentambassadors/profile/cce452b6-52a6-48fd-bd5e-0ca27a0664b8",
+    },
+    {
+        title: "Aspires Leadership Program Alumni",
+        description:
+            "Completed a selective leadership development program and mentored peers in innovation and personal growth.",
+        issuer: "Aspire Institute",
+        year: "2025",
+        image: aspire,
+        verifyLink:
+            "https://www.aspireleaders.org/program/aspire-leaders-program/",
+    },
+    {
+        title: "Aspire Institute Acknowledgement Letter",
+        description:
+            "Learned the fundamentals of AI, including machine learning, neural networks, and ethical AI practices.",
+        issuer: "Aspire Institute",
+        year: "2025",
+        image: aspireLetter,
+        verifyLink: "https://www.aspireleaders.org/program/aspire-leaders-program/",
     }
 ];
 

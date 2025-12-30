@@ -1,0 +1,35 @@
+/* src/assets/components/allActivities.css */
+.all-activities-page {
+    min-height: 100vh;
+    padding-top: 80px;
+    /* Space for fixed navbar */
+    background: var(--bg-primary);
+}
+
+.all-activities-page .page-header {
+    text-align: center;
+    padding: 60px 20px 20px;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.all-activities-page .page-header h1 {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.all-activities-page .page-header p {
+    font-family: var(--font-main);
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Reuse styles from activities.css automatically, but override section padding if needed */
+.all-activities-page .activities-section {
+    background: transparent;
+    padding-top: 40px;
+}

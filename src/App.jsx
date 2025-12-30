@@ -1,4 +1,3 @@
-// src/App.jsx
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
@@ -8,11 +7,13 @@ import Projects from "./assets/components/Projects";
 import Research from "./assets/components/Research";
 import Contact from "./assets/components/Contact";
 import AutomataProject from "./assets/components/AutomataProject";
-import CUMSProject from "./assets/components/CUMSProject"; // ✅ import CUMS project page
+import CUMSProject from "./assets/components/CUMSProject";
 import Certifications from "./assets/components/Certifications";
-import AllProjects from "./assets/components/AllProjects"; // ✅ Import AllProjects
-import AllCertifications from "./assets/components/AllCertifications"; // ✅ Import AllCertifications
-import AllResearch from "./assets/components/AllResearch"; // ✅ Import AllResearch
+import Activities from "./assets/components/Activities"; // ✅ Import Activities
+import AllProjects from "./assets/components/AllProjects";
+import AllCertifications from "./assets/components/AllCertifications";
+import AllResearch from "./assets/components/AllResearch";
+import AllActivities from "./assets/components/AllActivities"; // ✅ Import AllActivities
 import Footer from "./assets/components/Footer";
 
 
@@ -32,6 +33,7 @@ export default function App() {
                 <Projects />
                 <Research />
                 <Certifications />
+                <Activities /> {/* ✅ Added Activities Section */}
                 <Contact />
               </>
             }
@@ -39,10 +41,11 @@ export default function App() {
 
           {/* Project detail pages */}
           <Route path="/automata-project" element={<AutomataProject />} />
-          <Route path="/cums-project" element={<CUMSProject />} /> {/* ✅ CUMS route */}
-          <Route path="/all-projects" element={<AllProjects />} /> {/* ✅ All Projects route */}
-          <Route path="/all-certifications" element={<AllCertifications />} /> {/* ✅ All Certifications route */}
-          <Route path="/all-research" element={<AllResearch />} /> {/* ✅ All Research route */}
+          <Route path="/cums-project" element={<CUMSProject />} />
+          <Route path="/all-projects" element={<AllProjects />} />
+          <Route path="/all-certifications" element={<AllCertifications />} />
+          <Route path="/all-research" element={<AllResearch />} />
+          <Route path="/all-activities" element={<AllActivities />} /> {/* ✅ All Activities route */}
         </Routes>
       </main>
 
@@ -51,3 +54,5 @@ export default function App() {
     </div>
   );
 }
+
+
