@@ -2,6 +2,7 @@
 import mlsa from "../assets/images/certs/mlsa.jpg";
 import aspire from "../assets/images/certs/aspire.jpg";
 import nftp from "../assets/images/certs/nftp.jpg";
+import googleData from "../assets/images/certs/googleData.jpg";
 import meta from "../assets/images/certs/meta.jpg";
 import python from "../assets/images/certs/python.jpg";
 import google from "../assets/images/certs/googleessentials.jpg";
@@ -28,7 +29,7 @@ const certificationsData = [
         verifyLink:
             "https://www.aspireleaders.org/program/aspire-leaders-program/",
     },
-          {
+    {
         title: "Aspire Institute Acknowledgement Letter",
         description:
             "Learned the fundamentals of AI, including machine learning, neural networks, and ethical AI practices.",
@@ -45,6 +46,15 @@ const certificationsData = [
         year: "2024",
         image: nftp,
         verifyLink: "https://nftp.pitb.gov.pk/",
+    },
+    {
+        title: "Google Data Analytics",
+        description:
+            "Professional training in data analysis covering data collection, cleaning, analysis, visualization, spreadsheets, SQL, Tableau, and R to extract insights and support data-driven decisions.",
+        issuer: "Google",
+        year: "2025",
+        image: googleData,
+        verifyLink: "https://coursera.org/verify/professional-cert/14SJCIWS0ECQ",
     },
     {
         title: "Meta Front-End Developer Professional Certificate",
