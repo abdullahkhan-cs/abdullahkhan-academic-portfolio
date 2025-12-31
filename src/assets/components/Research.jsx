@@ -12,19 +12,30 @@ export default function Research({ showAll = false }) {
 
       <div className="research-container">
         <h2 className="fade-in">Research Publications</h2>
-        <div className="research-grid">
+        <div className={`research-grid ${showAll ? "list-view" : ""}`}>
           {displayedPapers.map((paper, index) => (
             <div className="research-card fade-in" key={index}>
-              <h3>{paper.title}</h3>
-              <p className="abstract">{paper.abstract}</p>
-              <div className="keywords">
-                {paper.keywords.map((key, i) => (
-                  <span key={i} className="keyword-tag">{key}</span>
-                ))}
+              <div className="research-image-container">
+                <img src={paper.image} alt={paper.title} className="research-image" />
               </div>
-              <a href={paper.link} className="btn-view" target="_blank" rel="noreferrer">
-                View Paper
-              </a>
+              <div className="research-content">
+                <h3>{paper.title}</h3>
+                <p className="supervisor"><strong>Supervisor:</strong> {paper.supervisor}</p>
+                <p className="abstract">{paper.abstract}</p>
+                <div className="keywords">
+                  {paper.keywords.map((key, i) => (
+                    <span key={i} className="keyword-tag">{key}</span>
+                  ))}
+                </div>
+                <div className="research-links">
+                  <a href={paper.paperLink} className="btn-research" target="_blank" rel="noreferrer">
+                    View Paper
+                  </a>
+                  <a href={paper.githubLink} className="btn-research btn-github" target="_blank" rel="noreferrer">
+                    GitHub
+                  </a>
+                </div>
+              </div>
             </div>
           ))}
         </div>

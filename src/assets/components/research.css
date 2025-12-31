@@ -25,32 +25,62 @@
   padding-bottom: 10px;
 }
 
-.research-container h2::after {
-  content: none;
-}
-
 .research-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
 
-@media (max-width: 768px) {
-  .research-grid {
-    grid-template-columns: 1fr;
-  }
+/* List View for All Research (Large vertical scale) */
+.research-grid.list-view {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
+.research-grid.list-view .research-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+.research-grid.list-view .research-image-container {
+  margin-bottom: 30px;
+  height: auto;
+  max-height: 500px;
+}
+
+.research-grid.list-view .research-image {
+  height: 100%;
+  object-fit: contain;
+  box-shadow: var(--shadow-md);
+}
+
+.research-grid.list-view .research-content {
+  padding: 20px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  box-shadow: var(--shadow-sm);
+}
+
+
+/* Standard Card (Home Page & Grid) */
 .research-card {
   background: var(--bg-primary);
   border: 1px solid var(--border-color);
   border-radius: 4px;
   /* Classic */
-  padding: 2.5rem;
-  transition: all 0.3s ease;
-  position: relative;
   overflow: hidden;
+  transition: all 0.3s ease;
   box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
 }
 
 .research-card:hover {
@@ -59,13 +89,46 @@
   border-color: var(--primary);
 }
 
+.research-image-container {
+  width: 100%;
+  height: 200px;
+  background: #f9f9f9;
+  border-bottom: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.research-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.research-card:hover .research-image {
+  transform: scale(1.05);
+}
+
+.research-content {
+  padding: 2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
 .research-card h3 {
   font-family: var(--font-display);
   font-size: 1.4rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   color: var(--text-primary);
   line-height: 1.4;
   font-weight: 700;
+}
+
+.supervisor {
+  font-size: 0.95rem;
+  color: var(--text-accent);
+  margin-bottom: 1rem;
+  font-family: var(--font-main);
 }
 
 .abstract {
@@ -74,6 +137,7 @@
   line-height: 1.7;
   font-size: 1rem;
   font-family: var(--font-main);
+  flex-grow: 1;
 }
 
 .keywords {
@@ -90,14 +154,19 @@
   color: var(--text-secondary);
   border: 1px solid #ddd;
   border-radius: 4px;
-  /* Classic */
   font-weight: 400;
   font-family: monospace;
 }
 
-.research-card .btn-view {
+.research-links {
+  display: flex;
+  gap: 15px;
+  margin-top: auto;
+}
+
+.btn-research {
   display: inline-block;
-  padding: 0.8rem 2rem;
+  padding: 0.8rem 1.5rem;
   background: transparent;
   color: var(--primary);
   border: 1px solid var(--primary);
@@ -105,14 +174,26 @@
   font-weight: 600;
   transition: all 0.3s ease;
   text-align: center;
-  width: auto;
+  flex: 1;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  text-decoration: none;
+  font-size: 0.9rem;
 }
 
-.research-card .btn-view:hover {
+.btn-research:hover {
   background: var(--primary);
   color: white;
   transform: translateY(-2px);
-  box-shadow: none;
+}
+
+.btn-github {
+  border-color: var(--secondary);
+  color: var(--secondary);
+}
+
+.btn-github:hover {
+  background: var(--secondary);
+  border-color: var(--secondary);
+  color: white;
 }

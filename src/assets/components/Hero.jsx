@@ -26,10 +26,6 @@ export default function Hero() {
             Software Developer | Aspire Leaders Alumnus | Researcher | Microsoft Student Ambassador
           </h2>
           <p className="fade-in-delay">
-            Quaid-e-Awam University of Engineering, Science and Technology 
-            <br />
-            Bsc in Computer Science | 2023 - Present
-            <br />
             I am highly motivated Computer Science undergraduate with a strong focus on Artificial Intelligence, Machine Learning, Computer Vision. Passionate about research and technology, I strive to combine academic knowledge with practical skills to develop solutions that make a meaningful impact.
           </p>
           <div className="hero-buttons fade-in-delay-2">

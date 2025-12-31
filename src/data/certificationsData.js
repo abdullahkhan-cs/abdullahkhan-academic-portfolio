@@ -65,10 +65,10 @@ const certificationsData = [
         verifyLink: "https://coursera.org/verify/specialization/3J3PM9E5GE7K",
     },
     {
-        title: "Microsoft Learn Student Ambassador (MLSA)",
+        title: "Microsoft Student Ambassador (MSA)",
         description:
             "Engaged in global tech community initiatives, organized events, and promoted Microsoft technologies to empower student learning.",
-        issuer: "Microsoft Learn Student Program",
+        issuer: "Microsoft Student Program",
         year: "Ongoing",
         image: mlsa,
         verifyLink:

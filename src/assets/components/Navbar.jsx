@@ -30,6 +30,10 @@ export default function Navbar() {
       setActive("research");
     } else if (location.pathname === "/all-activities") {
       setActive("activities");
+    } else if (location.pathname === "/academic-cv") {
+      setActive("academic-cv");
+    } else if (location.pathname === "/professional-cv") {
+      setActive("professional-cv");
     } else if (location.pathname === "/") {
       // Only track sections on home page
       const sections = document.querySelectorAll("section[id]");
@@ -97,13 +101,30 @@ export default function Navbar() {
           id="primary-navigation"
           className={`nav-links ${open ? "open" : ""}`}
         >
-          {["home", "projects", "research", "certifications", "activities", "contact"].map((id) => (
+          {[
+            { id: "home", label: "Home", type: "section" },
+            { id: "projects", label: "Projects", type: "section" },
+            { id: "research", label: "Research", type: "section" },
+            { id: "all-certifications", label: "Certifications", type: "page", path: "/all-certifications" },
+            { id: "activities", label: "Activities", type: "section" },
+            { id: "academic-cv", label: "Academic CV", type: "page", path: "/academic-cv" },
+            { id: "professional-cv", label: "Professional CV", type: "page", path: "/professional-cv" },
+            { id: "contact", label: "Contact", type: "section" },
+          ].map((item) => (
             <span
-              key={id}
-              onClick={() => scrollToSection(id)}
-              className={active === id ? "active-link" : ""}
+              key={item.id}
+              onClick={() => {
+                if (item.type === "page") {
+                  navigate(item.path);
+                  setOpen(false);
+                  setActive(item.id);
+                } else {
+                  scrollToSection(item.id);
+                }
+              }}
+              className={active === item.id ? "active-link" : ""}
             >
-              {id.charAt(0).toUpperCase() + id.slice(1)}
+              {item.label}
             </span>
           ))}
         </nav>

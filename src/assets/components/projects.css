@@ -25,30 +25,71 @@
   padding-bottom: 10px;
 }
 
-/* Remove ::after line */
 .projects-container h2::after {
   content: none;
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2.5rem;
-  /* More breathing room */
 }
 
-@media (max-width: 768px) {
-  .projects-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
+/* List View (Diagramatical) */
+.projects-grid.list-view {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.project-card {
+.projects-grid.list-view .project-card {
+  display: flex;
+  flex-direction: column;
+  /* Stack image then content */
+  padding: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.projects-grid.list-view .project-image-container {
+  width: 100%;
+  height: auto;
+  margin-bottom: 25px;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  background: white;
+}
+
+.projects-grid.list-view .project-image {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: contain;
+  /* Show full diagram */
+  display: block;
+}
+
+.projects-grid.list-view .project-content {
   background: var(--bg-primary);
-  /* Use primary white, not secondary gray usually */
+  padding: 30px;
   border: 1px solid var(--border-color);
   border-radius: 4px;
-  /* Classic slight rounded */
+  /* Square/Small radius */
+  box-shadow: var(--shadow-sm);
+}
+
+/* Grid View Card (Small Square Modern) */
+.project-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  /* Small radius for modern square look */
   padding: 2rem;
   transition: all 0.3s ease;
   display: flex;
@@ -57,13 +98,22 @@
   position: relative;
   overflow: hidden;
   box-shadow: var(--shadow-sm);
-  /* Subtle */
+  min-height: 320px;
+  /* Force square-ish aspect */
 }
 
 .project-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-5px);
   box-shadow: var(--shadow-md);
   border-color: var(--primary);
+}
+
+.project-content {
+  display: flex;
+  /* Flex to push footer down */
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
 }
 
 .project-card h3 {
@@ -71,6 +121,7 @@
   font-size: 1.5rem;
   margin-bottom: 1rem;
   color: var(--text-primary);
+  font-weight: 700;
 }
 
 .project-card p {
@@ -78,6 +129,7 @@
   margin-bottom: 1.5rem;
   line-height: 1.6;
   font-family: var(--font-main);
+  flex-grow: 1;
 }
 
 .card-footer {
@@ -92,40 +144,40 @@
 }
 
 .tool-tag {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   padding: 0.3rem 0.6rem;
-  background: var(--bg-secondary);
-  /* Very light gray */
-  color: var(--text-secondary);
-  border-radius: 4px;
-  font-weight: 400;
-  border: 1px solid #e0e0e0;
+  background: #f4f6f7;
+  color: var(--text-accent);
+  border-radius: 2px;
+  /* Sharper */
+  border: 1px solid #dcdcdc;
   font-family: monospace;
-  /* Technical feel */
+  font-weight: 500;
 }
 
-/* Light/Classic Button Style */
+/* Modern Button */
 .btn-view {
   display: inline-block;
   padding: 0.8rem 1.5rem;
   background: transparent;
   color: var(--primary);
   border: 1px solid var(--primary);
-  border-radius: 4px;
+  border-radius: 2px;
+  /* Sharper */
   font-weight: 600;
   transition: all 0.3s ease;
   text-align: center;
   width: 100%;
   text-transform: uppercase;
-  font-size: 0.9rem;
-  letter-spacing: 0.5px;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
 }
 
 .btn-view:hover {
   background: var(--primary);
   color: white;
   transform: translateY(-2px);
-  box-shadow: none;
+  box-shadow: 0 4px 12px rgba(44, 62, 80, 0.15);
 }
 
 .view-all-container {
@@ -139,10 +191,9 @@
   background: transparent;
   border: 1px solid var(--text-secondary);
   color: var(--text-primary);
-  border-radius: 4px;
-  /* Classic */
+  border-radius: 2px;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.95rem;
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -153,5 +204,11 @@
   color: white;
   border-color: var(--primary);
   transform: translateY(-3px);
-  box-shadow: none;
+  box-shadow: 0 4px 12px rgba(44, 62, 80, 0.15);
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
 }

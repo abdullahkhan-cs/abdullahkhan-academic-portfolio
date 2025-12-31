@@ -14,6 +14,8 @@ import AllProjects from "./assets/components/AllProjects";
 import AllCertifications from "./assets/components/AllCertifications";
 import AllResearch from "./assets/components/AllResearch";
 import AllActivities from "./assets/components/AllActivities"; // ✅ Import AllActivities
+import AcademicCV from "./assets/components/AcademicCV";
+import ProfessionalCV from "./assets/components/ProfessionalCV";
 import Footer from "./assets/components/Footer";
 
 
@@ -46,6 +48,8 @@ export default function App() {
           <Route path="/all-certifications" element={<AllCertifications />} />
           <Route path="/all-research" element={<AllResearch />} />
           <Route path="/all-activities" element={<AllActivities />} /> {/* ✅ All Activities route */}
+          <Route path="/academic-cv" element={<AcademicCV />} />
+          <Route path="/professional-cv" element={<ProfessionalCV />} />
         </Routes>
       </main>
 

@@ -1,0 +1,148 @@
+/* src/assets/components/academicCV.css */
+
+.academic-cv-container {
+    padding: 60px 50px;
+    /* Internal padding of the "paper" */
+    max-width: 850px;
+    /* A4-ish proportions */
+    margin: 100px auto 50px;
+    /* Top margin for navbar */
+    background: #ffffff;
+    /* Paper color */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    /* Lifted paper effect */
+    border-radius: 2px;
+    /* Slight rounding or none for paper */
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    position: relative;
+    border: 1px solid #e0e0e0;
+}
+
+/* Print Styles */
+@media print {
+    .academic-cv-container {
+        margin: 0;
+        box-shadow: none;
+        border: none;
+        max-width: 100%;
+        padding: 40px;
+    }
+
+    .cv-nav-link,
+    .nav-header {
+        display: none !important;
+    }
+}
+
+.cv-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: var(--primary);
+    font-family: var(--font-display);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 20px;
+}
+
+.cv-nav-link {
+    font-size: 0.85rem;
+    font-family: var(--font-main);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    border: 1px solid var(--border-color);
+    padding: 6px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.cv-nav-link:hover {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+.cv-section {
+    margin-bottom: 25px;
+    padding: 0;
+    /* Removing card padding */
+    background: transparent;
+    /* Transparent background */
+    border: none;
+    /* No border */
+    box-shadow: none;
+    /* No shadow */
+}
+
+.cv-section h2 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--primary);
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    display: block;
+    /* Full width line */
+    font-family: var(--font-display);
+    font-weight: 700;
+}
+
+.cv-item {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+/* Compact headers for items */
+.cv-item h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+    font-family: var(--font-display);
+}
+
+.cv-item p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+/* Dates/Year align right or distinct style if needed. 
+   For now, keeping them simple block for clean reading. 
+*/
+
+.cv-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+.cv-list li {
+    margin-bottom: 5px;
+    line-height: 1.5;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .academic-cv-container {
+        padding: 30px 20px;
+        margin: 80px 15px 30px;
+    }
+
+    .cv-title {
+        font-size: 1.8rem;
+    }
+}

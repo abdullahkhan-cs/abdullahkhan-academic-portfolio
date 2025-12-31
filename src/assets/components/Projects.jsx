@@ -15,41 +15,49 @@ export default function Projects({ showAll = false }) {
       <div className="projects-container">
         <h2 className="fade-in">Featured Projects</h2>
 
-        <div className="projects-grid">
+        <div className={`projects-grid ${showAll ? "list-view" : ""}`}>
           {displayedProjects.map((project, index) => (
             <div
               className="project-card fade-in"
               key={index}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-              </div>
+              {showAll && (
+                <div className="project-image-container">
+                  <img src={project.image} alt={project.title} className="project-image" />
+                </div>
+              )}
 
-              <div className="card-footer">
-                <div className="tools">
-                  {project.tools.map((tool, i) => (
-                    <span key={i} className="tool-tag">
-                      {tool}
-                    </span>
-                  ))}
+              <div className="project-content">
+                <div>
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
                 </div>
 
-                {project.isInternal ? (
-                  <Link to={project.link} className="btn-view">
-                    View Details →
-                  </Link>
-                ) : (
-                  <a
-                    href={project.link}
-                    className="btn-view"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    View Code/Demo ↗
-                  </a>
-                )}
+                <div className="card-footer">
+                  <div className="tools">
+                    {project.tools.map((tool, i) => (
+                      <span key={i} className="tool-tag">
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+
+                  {project.isInternal ? (
+                    <Link to={project.link} className="btn-view">
+                      View Details →
+                    </Link>
+                  ) : (
+                    <a
+                      href={project.link}
+                      className="btn-view"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      View Code/Demo ↗
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           ))}

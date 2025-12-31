@@ -12,7 +12,7 @@ export default function Certifications({ showAll = false }) {
     <section id="certifications" className="certifications-section">
       <div className="certifications-container">
         <h2 className="fade-in">Certifications & Programs</h2>
-        <div className="cert-grid">
+        <div className={`cert-grid ${showAll ? "list-view" : ""}`}>
           {displayedCerts.map((cert, index) => (
             <div className="cert-card fade-in" key={index} style={{ animationDelay: `${index * 0.1}s` }}>
               <img
