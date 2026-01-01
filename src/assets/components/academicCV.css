@@ -1,66 +1,43 @@
 /* src/assets/components/academicCV.css */
 
 .academic-cv-container {
-    padding: 60px 50px;
-    /* Internal padding of the "paper" */
-    max-width: 850px;
-    /* A4-ish proportions */
-    margin: 100px auto 50px;
-    /* Top margin for navbar */
+    padding: 30px;
+    max-width: 1100px; /* Wider for 2 columns */
+    margin: 80px auto 40px;
     background: #ffffff;
-    /* Paper color */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    /* Lifted paper effect */
-    border-radius: 2px;
-    /* Slight rounding or none for paper */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Softer shadow */
+    border-radius: 4px;
     color: var(--text-primary);
-    font-family: var(--font-main);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position: relative;
     border: 1px solid #e0e0e0;
-}
-
-/* Print Styles */
-@media print {
-    .academic-cv-container {
-        margin: 0;
-        box-shadow: none;
-        border: none;
-        max-width: 100%;
-        padding: 40px;
-    }
-
-    .cv-nav-link,
-    .nav-header {
-        display: none !important;
-    }
+    font-size: 0.8rem; /* Small base font */
 }
 
 .cv-title {
     text-align: center;
-    font-size: 2.2rem;
-    margin-bottom: 30px;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
     color: var(--primary);
     font-family: var(--font-display);
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 15px;
-    border-bottom: 2px solid var(--primary);
-    padding-bottom: 20px;
+    gap: 20px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 15px;
 }
 
 .cv-nav-link {
-    font-size: 0.85rem;
-    font-family: var(--font-main);
+    font-size: 0.7rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     color: var(--text-secondary);
     text-decoration: none;
     border: 1px solid var(--border-color);
-    padding: 6px 16px;
+    padding: 4px 10px;
     border-radius: 4px;
-    transition: all 0.3s ease;
-    font-weight: 600;
+    transition: all 0.2s ease;
 }
 
 .cv-nav-link:hover {
@@ -69,80 +46,129 @@
     border-color: var(--primary);
 }
 
-.cv-section {
-    margin-bottom: 25px;
-    padding: 0;
-    /* Removing card padding */
-    background: transparent;
-    /* Transparent background */
-    border: none;
-    /* No border */
-    box-shadow: none;
-    /* No shadow */
+/* Main Grid Layout */
+.cv-main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
 }
 
-.cv-section h2 {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--primary);
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 15px;
-    padding-bottom: 5px;
-    display: block;
-    /* Full width line */
-    font-family: var(--font-display);
-    font-weight: 700;
-}
-
-.cv-item {
-    margin-bottom: 15px;
+.cv-column {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 15px;
 }
 
-/* Compact headers for items */
-.cv-item h3 {
-    font-size: 1.1rem;
+/* Tree Structure Styles */
+.tree-section {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.tree-node-header {
+    font-size: 0.95rem; /* Small header */
     font-weight: 700;
-    color: var(--text-primary);
-    margin: 0;
-    font-family: var(--font-display);
+    color: var(--primary);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.cv-item p {
-    margin: 0;
-    line-height: 1.5;
-    font-size: 0.95rem;
-    color: var(--text-secondary);
+.tree-node-header::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    margin-right: 10px;
 }
 
-/* Dates/Year align right or distinct style if needed. 
-   For now, keeping them simple block for clean reading. 
+.tree-content {
+    border-left: 2px solid #e0e0e0;
+    margin-left: 3px; /* Align with the dot center (8px width -> center at 4px, border 2px -> center at 1px. Start 3px works visually) */
+    padding-left: 20px;
+    padding-bottom: 5px;
+}
+
+.tree-item {
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.tree-item::before {
+    content: '';
+    position: absolute;
+    left: -22px; /* 20px padding + 2px border */
+    top: 10px;
+    width: 20px;
+    height: 1px;
+    background: #e0e0e0;
+}
+
+.tree-item h3 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 2px 0;
+    line-height: 1.2;
+}
+
+.tree-item p {
+    margin: 0;
+    font-size: 0.75rem;
+    color: #666;
+    line-height: 1.3;
+}
+
+/* List Items in Tree */
+.tree-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tree-list li {
+    position: relative;
+    font-size: 0.8rem;
+    color: #555;
+    margin-bottom: 4px;
+    padding-left: 5px;
+}
+
+.tree-list li::before {
+    content: '';
+    position: absolute;
+    left: -27px; /* 20px padding + 5px internal + 2px border */
+    top: 50%;
+    width: 20px;
+    height: 1px;
+    background: #e0e0e0;
+}
+
+/* Connect the last vertical line properly? 
+   CSS cannot easily stop the border at the last item without complex nth-child selectors or extra divs. 
+   For now, we accept the full vertical line. 
 */
 
-.cv-list {
-    list-style-type: disc;
-    padding-left: 20px;
-    margin-top: 5px;
-}
-
-.cv-list li {
-    margin-bottom: 5px;
-    line-height: 1.5;
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-}
-
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 768px) {
-    .academic-cv-container {
-        padding: 30px 20px;
-        margin: 80px 15px 30px;
+    .cv-main-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
-
+    
+    .academic-cv-container {
+        padding: 20px;
+        margin-top: 80px;
+    }
+    
     .cv-title {
-        font-size: 1.8rem;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 1.5rem;
     }
 }
