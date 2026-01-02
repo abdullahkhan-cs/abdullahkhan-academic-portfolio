@@ -8,6 +8,7 @@ import python from "../assets/images/certs/python.jpg";
 import google from "../assets/images/certs/googleessentials.jpg";
 import aspireLetter from "../assets/images/certs/aspireLetter.jpg";
 import CV from "../assets/images/certs/CV.jpg";
+import csetConference from "../assets/images/csetConference.jpeg";
 
 const certificationsData = [
     {
@@ -19,7 +20,7 @@ const certificationsData = [
         image: nftp,
         verifyLink: "https://nftp.pitb.gov.pk/",
     },
-     {
+    {
         title: "Introduction to Computer Vision",
         description:
             "Gained hands-on experience with Computer Vision, approaches to computer vision-pixel intensity histograms, CNN, digital images and pixels-analog to digital images, pixel neighborhood, different tasks in Computer Vision like classification, classification and localization, object detection, instance segmentation",
@@ -92,6 +93,15 @@ const certificationsData = [
         year: "2025",
         image: aspireLetter,
         verifyLink: "https://www.aspireleaders.org/program/aspire-leaders-program/",
+    },
+    {
+        title: "CSET National Conference",
+        description:
+            "Provides a forum for researchers, scientists, and professionals to share knowledge and results in areas such as Computer science theory & methodology, Information technology, Artificial intelligence (AI), Data science, Cybersecurity",
+        issuer: "Department of Computer Science",
+        year: "2025",
+        image: csetConference,
+        verifyLink: "https://nftp.pitb.gov.pk/",
     }
 ];
 
