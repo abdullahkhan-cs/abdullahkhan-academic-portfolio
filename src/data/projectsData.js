@@ -1,5 +1,6 @@
 // src/data/projectsData.js
 import portfolioImg from "../assets/images/portfolio.JPG";
+import weatherApp from "../assets/images/weatherApp.JPG"
 
 const projectsData = [
   {
@@ -13,7 +14,7 @@ const projectsData = [
   },
   {
     title: "Weather App",
-    image: "../assets/images/weatherApp.png",
+    image: weatherApp,
     description:
       "A stunning, modern weather application built with React and Vite, featuring a premium Glassmorphism UI, dynamic Dark/Light themes, and real-time weather data.",
     tools: ["React.js", "Vite", "Tailwind CSS (Layouts)", "Custom CSS (Glassmorphism & Animations)", "React Context API (Theming)"],

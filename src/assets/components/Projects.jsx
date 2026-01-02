@@ -1,10 +1,11 @@
 // src/assets/components/Projects.jsx
-import React from "react";
+import React, { useState } from "react";
 import "./projects.css";
 import { Link } from "react-router-dom";
 import projectsData from "../../data/projectsData"; // ⬅ import data here
 
 export default function Projects({ showAll = false }) {
+  const [selectedImage, setSelectedImage] = useState(null);
   const displayedProjects = showAll ? projectsData : projectsData.slice(0, 3);
 
   return (
@@ -24,7 +25,12 @@ export default function Projects({ showAll = false }) {
             >
               {showAll && (
                 <div className="project-image-container">
-                  <img src={project.image} alt={project.title} className="project-image" />
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="project-image"
+                    onClick={() => setSelectedImage(project.image)}
+                  />
                 </div>
               )}
 
@@ -68,6 +74,20 @@ export default function Projects({ showAll = false }) {
             <Link to="/all-projects" className="btn-view-all">
               View All Projects →
             </Link>
+          </div>
+        )}
+
+        {selectedImage && (
+          <div className="modal" onClick={() => setSelectedImage(null)}>
+            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+              <img src={selectedImage} alt="Project Preview" />
+              <button
+                className="close-btn"
+                onClick={() => setSelectedImage(null)}
+              >
+                ✕
+              </button>
+            </div>
           </div>
         )}
       </div>
