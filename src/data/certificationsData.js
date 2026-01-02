@@ -101,7 +101,7 @@ const certificationsData = [
         issuer: "Department of Computer Science",
         year: "2025",
         image: csetConference,
-        verifyLink: "https://nftp.pitb.gov.pk/",
+        verifyLink: "#",
     }
 ];
 
