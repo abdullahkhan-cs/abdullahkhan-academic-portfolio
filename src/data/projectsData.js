@@ -1,15 +1,16 @@
 // src/data/projectsData.js
 import portfolioImg from "../assets/images/portfolio.JPG";
 import weatherApp from "../assets/images/weatherApp.JPG"
+import SV from "../assets/images/SV.JPG"
 
 const projectsData = [
   {
     title: "Automata-Based Software Vulnerability Detection",
-    image: "https://placehold.co/600x400?text=Project+Diagram",
+    image: SV,
     description:
       "Developed a Python-based tool to detect SQL injection and hardcoded credentials using finite automata. Visualized vulnerabilities using Graphviz, demonstrating advanced code analysis techniques.",
     tools: ["Python", "AST", "Graphviz", "Automata"],
-    link: "https://github.com/Abdullah22588/automata-based-software-vuln-detection",
+    link: "https://software-vuln-detection-a9bycya7hgcdd5bh.southeastasia-01.azurewebsites.net/",
     isInternal: true,
   },
   {
