@@ -19,7 +19,7 @@ const projectsData = [
     description:
       "A stunning, modern weather application built with React and Vite, featuring a premium Glassmorphism UI, dynamic Dark/Light themes, and real-time weather data.",
     tools: ["React.js", "Vite", "Tailwind CSS (Layouts)", "Custom CSS (Glassmorphism & Animations)", "React Context API (Theming)"],
-    link: "https://github.com/Abdullah22588/premium-weather-app",
+    link: "https://weather-now-f9ereddsf4fxb4g7.southindia-01.azurewebsites.net/",
     isInternal: true,
   },
   {
