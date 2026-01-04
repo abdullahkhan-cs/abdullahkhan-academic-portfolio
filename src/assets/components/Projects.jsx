@@ -51,7 +51,7 @@ export default function Projects({ showAll = false }) {
 
                   {project.isInternal ? (
                     <Link to={project.link} className="btn-view">
-                      View Details →
+                      View App →
                     </Link>
                   ) : (
                     <a
