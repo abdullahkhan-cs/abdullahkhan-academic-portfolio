@@ -2,8 +2,18 @@
 import portfolioImg from "../assets/images/portfolio.JPG";
 import weatherApp from "../assets/images/weatherApp.JPG"
 import SV from "../assets/images/SV.JPG"
+import face from "../assets/images/face.JPG"
 
 const projectsData = [
+  {
+    title: "Real-Time Face Detection Web Application",
+    image: face,
+    description:
+      "•	Real-time face detection using OpenCV with face count & FPS monitoring.",
+    tools: ["Computer Vision", "OpenCV", "Python"],
+    link: "https://github.com/Abdullah22588/Real-Time-Face-Detection-Web-Application",
+    isInternal: true,
+  },
   {
     title: "Automata-Based Software Vulnerability Detection",
     image: SV,
