@@ -2,7 +2,6 @@
 import portfolioImg from "../assets/images/portfolio.JPG";
 import weatherApp from "../assets/images/weatherApp.JPG"
 import SV from "../assets/images/SV.JPG"
-import face from "../assets/images/face.JPG"
 
 const projectsData = [
   {
