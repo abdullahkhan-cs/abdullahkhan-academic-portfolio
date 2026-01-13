@@ -46,11 +46,11 @@ export default function AcademicCV() {
                                 <p><strong>Role:</strong> Lead Researcher | <strong>Year:</strong> 2024</p>
                                 <p>Developed a lightweight static analysis method identifying SQL injection and hardcoded credentials using deterministic finite automata over Python AST tokens.</p>
                             </div>
-                            <div className="cv-item tree-item">
-                                <h3>Academic Project Title</h3>
+                            {/* <div className="cv-item tree-item">
+                                <h3>WealthFlow</h3>
                                 <p><strong>Role:</strong> Developer | <strong>Year:</strong> 2023</p>
-                                <p>Description of the academic project. Highlight key technologies used, the problem solved, and the outcome of the project.</p>
-                            </div>
+                                <p></p>
+                            </div> */}
                         </div>
                     </div>
 
@@ -58,8 +58,8 @@ export default function AcademicCV() {
                         <h2 className="tree-node-header">Honors and Awards</h2>
                         <div className="tree-content">
                             <ul className="cv-list tree-list">
-                                <li>Award Name - Year</li>
-                                <li>Award Name - Year</li>
+                                <li>Web Exhibition: Firsst Prize</li>
+                                <li>Programming Contest, Quest - First Prize</li>
                             </ul>
                         </div>
                     </div>

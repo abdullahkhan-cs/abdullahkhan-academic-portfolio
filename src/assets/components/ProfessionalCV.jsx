@@ -13,16 +13,13 @@ export default function ProfessionalCV() {
             <div className="cv-section">
                 <h2>Work Experience</h2>
                 <div className="cv-item">
-                    <h3>Job Title</h3>
-                    <p>Company Name</p>
-                    <p>Dates</p>
+                    <h3>PHP intern</h3>
+                    <p>iCreatives Technology</p>
+                    <p>Dates: May 2024 Sep 2024</p>
                     <ul className="cv-list">
-                        <li>Responsibility / Achievement 1</li>
-                        <li>Responsibility / Achievement 2</li>
-                        <li>Responsibility / Achievement 3</li>
                     </ul>
                 </div>
-                <div className="cv-item">
+                {/* <div className="cv-item">
                     <h3>Previous Job Title</h3>
                     <p>Company Name</p>
                     <p>Dates</p>
@@ -30,7 +27,7 @@ export default function ProfessionalCV() {
                         <li>Responsibility / Achievement 1</li>
                         <li>Responsibility / Achievement 2</li>
                     </ul>
-                </div>
+                </div> */}
             </div>
 
             <div className="cv-section">
@@ -38,7 +35,7 @@ export default function ProfessionalCV() {
                 <div className="skills-grid">
                     <div className="skill-category">
                         <h3>Technical Skills</h3>
-                        <p>JavaScript, React, Node.js, Python, etc.</p>
+                        <p>JavaScript, React, Node.js, Python, PHP, MySQL</p>
                     </div>
                     <div className="skill-category">
                         <h3>Soft Skills</h3>
@@ -46,7 +43,7 @@ export default function ProfessionalCV() {
                     </div>
                     <div className="skill-category">
                         <h3>Tools</h3>
-                        <p>Git, VS Code, Jira, etc.</p>
+                        <p>Git, VS Code, Jira</p>
                     </div>
                 </div>
             </div>
