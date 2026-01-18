@@ -9,6 +9,7 @@ import google from "../assets/images/certs/googleessentials.jpg";
 import aspireLetter from "../assets/images/certs/aspireLetter.jpg";
 import CV from "../assets/images/certs/CV.jpg";
 import csetConference from "../assets/images/csetConference.jpeg";
+import web_cert from "../assets/images/web_cert.jpg";
 
 const certificationsData = [
     {
@@ -101,6 +102,15 @@ const certificationsData = [
         issuer: "Department of Computer Science",
         year: "2025",
         image: csetConference,
+        verifyLink: "#",
+    },
+     {
+        title: "Web Exhibition",
+        description:
+            "Provides a forum for researchers, scientists, and professionals to share knowledge and results in areas such as Web Development, Information technology, Artificial intelligence (AI), Data science, Cybersecurity",
+        issuer: "Department of Computer Science",
+        year: "2025",
+        image: web_cert,
         verifyLink: "#",
     }
 ];

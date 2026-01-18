@@ -5,15 +5,6 @@ import SV from "../assets/images/SV.JPG"
 
 const projectsData = [
   {
-    title: "WealthFlow: Intelligently Manage Your Finances",
-    image: SV,
-    description:
-      "Developed a high-performance wealth management platform using a modern PHP architecture. I engineered WealthFlow to solve the complexity of personal finance by merging a secure, scalable backend with a 'Next Gen' UI. I focused heavily on data visualization and secure API integrations to ensure that financial tracking is as intuitive as it is powerful.",
-    tools: ["PHP", "Javascrip", "CSS", "MySQL"],
-    link: "https://software-vuln-detection-a9bycya7hgcdd5bh.southeastasia-01.azurewebsites.net/",
-    isInternal: true,
-  },
-  {
     title: "Automata-Based Software Vulnerability Detection",
     image: SV,
     description:
