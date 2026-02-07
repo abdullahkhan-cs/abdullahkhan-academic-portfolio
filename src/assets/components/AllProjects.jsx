@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Projects from "./Projects";
 
+
 export default function AllProjects() {
   // Scroll to top on mount
   useEffect(() => {

@@ -90,11 +90,7 @@ export default function Navbar() {
     >
       <div className="nav-container">
         {/* Brand */}
-        <div className="brand-wrapper">
-          <span className="brand" onClick={goHome}>
-            Abdullah Khan
-          </span>
-        </div>
+
 
         {/* Navigation */}
         <nav

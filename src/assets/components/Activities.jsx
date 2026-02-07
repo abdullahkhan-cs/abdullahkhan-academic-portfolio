@@ -5,18 +5,60 @@ import "./activities.css";
 import activitiesData from "../../data/activitiesData";
 
 export default function Activities({ showAll = false }) {
-    const [selectedImage, setSelectedImage] = useState(null);
+    const [galleryState, setGalleryState] = useState({
+        isOpen: false,
+        images: [],
+        currentIndex: 0
+    });
+
     const displayedActivities = showAll ? activitiesData : activitiesData.slice(0, 3);
 
-    const openModal = (img) => {
-        setSelectedImage(img);
-        document.body.style.overflow = "hidden"; // Prevent scrolling when modal is open
+    const openSlideshow = (images, index = 0) => {
+        setGalleryState({
+            isOpen: true,
+            images: images,
+            currentIndex: index
+        });
+        document.body.style.overflow = "hidden";
     };
 
-    const closeModal = () => {
-        setSelectedImage(null);
+    const closeSlideshow = () => {
+        setGalleryState((prev) => ({ ...prev, isOpen: false }));
         document.body.style.overflow = "auto";
     };
+
+    const nextImage = (e) => {
+        if (e) e.stopPropagation();
+        setGalleryState((prev) => ({
+            ...prev,
+            currentIndex: (prev.currentIndex + 1) % prev.images.length
+        }));
+    };
+
+    const prevImage = (e) => {
+        if (e) e.stopPropagation();
+        setGalleryState((prev) => ({
+            ...prev,
+            currentIndex: (prev.currentIndex - 1 + prev.images.length) % prev.images.length
+        }));
+    };
+
+    const goToImage = (index) => {
+        setGalleryState((prev) => ({ ...prev, currentIndex: index }));
+    };
+
+    // Keyboard navigation
+    React.useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (!galleryState.isOpen) return;
+            if (e.key === "Escape") closeSlideshow();
+            if (e.key === "ArrowRight") nextImage();
+            if (e.key === "ArrowLeft") prevImage();
+        };
+
+        window.addEventListener("keydown", handleKeyDown);
+        return () => window.removeEventListener("keydown", handleKeyDown);
+    }, [galleryState.isOpen]);
 
     return (
         <section id="activities" className="activities-section">
@@ -35,7 +77,7 @@ export default function Activities({ showAll = false }) {
                                     src={activity.images[0]}
                                     alt={activity.title}
                                     className="activity-image main-image"
-                                    onClick={() => openModal(activity.images[0])}
+                                    onClick={() => openSlideshow(activity.images, 0)}
                                 />
                                 {activity.images.length > 1 && (
                                     <div className="thumbnail-grid">
@@ -45,7 +87,7 @@ export default function Activities({ showAll = false }) {
                                                 src={img}
                                                 alt={`${activity.title} - ${i + 2}`}
                                                 className="activity-thumbnail"
-                                                onClick={() => openModal(img)}
+                                                onClick={() => openSlideshow(activity.images, i + 1)}
                                             />
                                         ))}
                                     </div>
@@ -86,13 +128,51 @@ export default function Activities({ showAll = false }) {
                 )}
             </div>
 
-            {/* Lightbox Modal */}
-            {selectedImage && (
-                <div className="image-modal" onClick={closeModal}>
-                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-                        <button className="close-btn" onClick={closeModal}>&times;</button>
-                        <img src={selectedImage} alt="Certificate / Activity" />
+            {/* World-Class Slideshow Modal */}
+            {galleryState.isOpen && (
+                <div className="slideshow-modal" onClick={closeSlideshow}>
+                    <div className="slideshow-counter">
+                        {galleryState.currentIndex + 1} / {galleryState.images.length}
                     </div>
+
+                    <button className="slideshow-close-btn" onClick={closeSlideshow}>&times;</button>
+
+                    {galleryState.images.length > 1 && (
+                        <button className="slideshow-nav-btn nav-prev" onClick={prevImage}>
+                            &#10094;
+                        </button>
+                    )}
+
+                    <div className="slideshow-content" onClick={(e) => e.stopPropagation()}>
+                        <div className="slideshow-image-container">
+                            <img
+                                src={galleryState.images[galleryState.currentIndex]}
+                                alt="Activity Slide"
+                                className="slideshow-main-image"
+                            />
+                        </div>
+                    </div>
+
+                    {galleryState.images.length > 1 && (
+                        <button className="slideshow-nav-btn nav-next" onClick={nextImage}>
+                            &#10095;
+                        </button>
+                    )}
+
+                    {/* Thumbnails Footer */}
+                    {galleryState.images.length > 1 && (
+                        <div className="slideshow-thumbnails" onClick={(e) => e.stopPropagation()}>
+                            {galleryState.images.map((img, idx) => (
+                                <img
+                                    key={idx}
+                                    src={img}
+                                    alt={`Thumbnail ${idx + 1}`}
+                                    className={`slideshow-thumb ${idx === galleryState.currentIndex ? 'active' : ''}`}
+                                    onClick={() => goToImage(idx)}
+                                />
+                            ))}
+                        </div>
+                    )}
                 </div>
             )}
         </section>
