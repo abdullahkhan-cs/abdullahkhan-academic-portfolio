@@ -38,6 +38,8 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+    scrollbar-gutter: stable;
 }
 
 body {
@@ -134,4 +136,16 @@ button {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #bbb;
+}
+
+/* Page Layout Adjustments for Fixed Navbar */
+.all-projects-page,
+.all-certifications-page,
+.all-research-page,
+.all-activities-page,
+.academic-cv-container,
+.professional-cv-container {
+    padding-top: 100px;
+    /* Clear the floating navbar */
+    min-height: 100vh;
 }

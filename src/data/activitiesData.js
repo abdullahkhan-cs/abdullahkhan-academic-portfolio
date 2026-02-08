@@ -4,7 +4,7 @@ import pythonBootcamp from "../assets/images/pythonBootcamp.jpeg";
 import microsoft365 from "../assets/images/microsoft365.jpeg";
 import cloudSkills from "../assets/images/cloudSkills.png";
 import csetConference from "../assets/images/csetConference.jpeg";
-import goldAmbassador from "../assets/images/goldAmbassador.jpg";
+import mlsa from "../assets/images/certs/mlsa.jpg";
 import aspireLeader from "../assets/images/aspireLeader.jpg";
 import socialHead from "../assets/images/socialHead.jpeg";
 import Rec_cert from "../assets/images/Rec_cert.jpeg";
@@ -15,6 +15,7 @@ import aspireCert from "../assets/images/certs/aspire.jpg";
 import aspireLetter from "../assets/images/certs/aspireLetter.jpg";
 import profile_mlsa from "../assets/images/profile_mlsa.JPG";
 import pythonCert from "../assets/images/certs/python.jpg";
+import Abdullah from "../assets/images/certs/Abdullah.jpg";
 
 const activitiesData = [
     {
@@ -23,7 +24,7 @@ const activitiesData = [
         organization: "Microsoft, USA",
         year: "2024 - Present",
         description: "Recognized as a Gold Microsoft Student Ambassador for demonstrating leadership, technical expertise, and community impact. Actively contributed to developer and student communities by organizing technical workshops, hosting learning initiatives, mentoring peers, and promoting Microsoft technologies aligned with industry standards.",
-        images: [profile_mlsa, goldAmbassador],
+        images: [profile_mlsa, mlsa],
         location: "Online",
         link: "https://mvp.microsoft.com/en-US/studentambassadors/profile/cce452b6-52a6-48fd-bd5e-0ca27a0664b8"
     },
@@ -33,7 +34,7 @@ const activitiesData = [
         organization: "Harvard University, USA",
         year: "2025",
         description: "Selected for the Aspire Leaders Program, a global leadership initiative focused on developing leadership, communication, and problem-solving skills among high-potential students. Engaged in structured learning modules, peer collaboration, and leadership development activities designed to foster ethical leadership and social impact.",
-        images: [aspireLeader, aspireCert, aspireLetter],
+        images: [aspireCert, aspireLetter],
         location: "Online",
         link: "https://www.aspireleaders.org/"
     },
@@ -63,7 +64,7 @@ const activitiesData = [
         organization: "Society of Coders",
         year: "2024",
         description: "Organized and hosted a three-day Python bootcamp focused on building strong programming fundamentals. The bootcamp covered core Python concepts, problem-solving techniques, and hands-on coding exercises. This was a great success with many students attending and receiving certificates.",
-        images: [pythonBootcamp, pythonCert], // Updated with actual python cert
+        images: [pythonBootcamp], // Updated with actual python cert
         location: "Sindh, Pakistan",
         link: "https://mvp.microsoft.com/en-US/activities/255596"
     },
@@ -93,7 +94,7 @@ const activitiesData = [
         organization: "Department of Computer Science",
         year: "2025",
         description: "Responsible for managing digital communication, promoting academic and technical activities, and enhancing student engagement through strategic content planning.",
-        images: [socialHead],
+        images: [socialHead, Abdullah],
         location: "Quaid-e-Awam University of Engineering Science and Technology",
         link: "https://www.linkedin.com/posts/society-of-coder-s_introducing-the-team-of-society-of-coders-activity-7260365100358770688-wFRK?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEIMBa0BgghCpTgM0V8ndhkZMcz-0qPc-PE"
     }

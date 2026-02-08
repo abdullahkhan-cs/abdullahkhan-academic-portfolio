@@ -14,7 +14,7 @@ export default function AllCertifications() {
     <div className="all-certifications-page">
       <Certifications showAll={true} />
 
-      <div className="view-all-container fade-in" style={{ paddingBottom: "50px", textAlign: "center" }}>
+      <div className="view-all-container fade-in" style={{ paddingBottom: "50px", textAlign: "center", scrollSnapAlign: "start" }}>
         <Link to="/" className="btn-view-all">
           ← Back to Home
         </Link>

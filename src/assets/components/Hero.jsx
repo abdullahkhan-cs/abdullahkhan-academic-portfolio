@@ -23,7 +23,7 @@ export default function Hero() {
             Hi, I’m <span>Abdullah</span>
           </h1>
           <h2 className="slide-up">
-            Software Developer | Aspire Leaders Alumnus | Researcher | Microsoft Student Ambassador
+            Computer Vision Enthusiast | Microsoft Student Ambassador | Harvard Aspire Leader
           </h2>
           <p className="fade-in-delay">
             I am highly motivated Computer Science undergraduate with a strong focus on Artificial Intelligence, Machine Learning, Computer Vision. Passionate about research and technology, I strive to combine academic knowledge with practical skills to develop solutions that make a meaningful impact.

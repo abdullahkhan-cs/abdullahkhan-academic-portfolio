@@ -17,16 +17,57 @@
 
 .hero {
   position: relative;
-  min-height: 90vh;
-  /* Classic full height */
+  min-height: 100vh;
+  /* Full viewport height */
+  scroll-snap-align: start;
+  /* Snap to start */
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--hero-bg);
-  padding: 60px 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  /* Matches Contact Section */
+  padding: 130px 20px 60px;
+  /* Increased top padding to clear fixed navbar */
   overflow: hidden;
   border-bottom: 1px solid var(--border-color);
   /* Subtle separation */
+}
+
+/* Background Ambient Orbs (Matching Contact) */
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  z-index: 0;
+  filter: blur(80px);
+  opacity: 0.6;
+}
+
+.hero::before {
+  background: rgba(44, 62, 80, 0.2);
+  top: -10%;
+  left: -10%;
+  animation: floatOrb 10s infinite alternate ease-in-out;
+}
+
+.hero::after {
+  background: rgba(44, 62, 80, 0.15);
+  bottom: -10%;
+  right: -10%;
+  animation: floatOrb 12s infinite alternate-reverse ease-in-out;
+}
+
+@keyframes floatOrb {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(30px, 30px);
+  }
 }
 
 /* Remove the diagonal split ::before */
@@ -39,6 +80,8 @@
   max-width: 1100px;
   width: 100%;
   gap: 60px;
+  position: relative;
+  z-index: 2;
 }
 
 /* Hero Text */
@@ -226,7 +269,7 @@
 /* ==================================== */
 @media (max-width: 992px) {
   .hero {
-    padding: 60px 20px;
+    padding: 120px 20px 60px;
     text-align: center;
   }
 

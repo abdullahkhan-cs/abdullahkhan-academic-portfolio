@@ -5,6 +5,11 @@
     /* Keeps pattern: light-gray-light-gray */
     position: relative;
     border-bottom: 1px solid var(--border-color);
+    min-height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .activities-container {

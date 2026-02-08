@@ -10,6 +10,7 @@ import aspireLetter from "../assets/images/certs/aspireLetter.jpg";
 import CV from "../assets/images/certs/CV.jpg";
 import csetConference from "../assets/images/csetConference.jpeg";
 import web_cert from "../assets/images/web_cert.jpg";
+import Abdullah from "../assets/images/certs/Abdullah.jpg";
 
 const certificationsData = [
     {
@@ -104,6 +105,15 @@ const certificationsData = [
         image: csetConference,
         verifyLink: "#",
     },
+    {
+        title: "Social Media Head, Society of Coders",
+        description:
+            "Managed social media presence, created engaging content, and promoted events to enhance the Society of Coders' visibility and engagement.",
+        issuer: "Society of Coders",
+        year: "2026",
+        image: Abdullah,
+        verifyLink: "#",
+    },
      {
         title: "Web Exhibition",
         description:
@@ -113,6 +123,7 @@ const certificationsData = [
         image: web_cert,
         verifyLink: "#",
     }
+
 ];
 
 export default certificationsData;
