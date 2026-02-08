@@ -77,6 +77,7 @@ export default function Activities({ showAll = false }) {
                                     src={activity.images[0]}
                                     alt={activity.title}
                                     className="activity-image main-image"
+                                    loading="lazy"
                                     onClick={() => openSlideshow(activity.images, 0)}
                                 />
                                 {activity.images.length > 1 && (
@@ -87,6 +88,7 @@ export default function Activities({ showAll = false }) {
                                                 src={img}
                                                 alt={`${activity.title} - ${i + 2}`}
                                                 className="activity-thumbnail"
+                                                loading="lazy"
                                                 onClick={() => openSlideshow(activity.images, i + 1)}
                                             />
                                         ))}
@@ -149,6 +151,7 @@ export default function Activities({ showAll = false }) {
                                 src={galleryState.images[galleryState.currentIndex]}
                                 alt="Activity Slide"
                                 className="slideshow-main-image"
+                                loading="lazy"
                             />
                         </div>
                     </div>
@@ -168,6 +171,7 @@ export default function Activities({ showAll = false }) {
                                     src={img}
                                     alt={`Thumbnail ${idx + 1}`}
                                     className={`slideshow-thumb ${idx === galleryState.currentIndex ? 'active' : ''}`}
+                                    loading="lazy"
                                     onClick={() => goToImage(idx)}
                                 />
                             ))}

@@ -29,6 +29,7 @@ export default function Projects({ showAll = false }) {
                     src={project.image}
                     alt={project.title}
                     className="project-image"
+                    loading="lazy"
                     onClick={() => setSelectedImage(project.image)}
                   />
                 </div>
@@ -80,7 +81,7 @@ export default function Projects({ showAll = false }) {
         {selectedImage && (
           <div className="modal" onClick={() => setSelectedImage(null)}>
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-              <img src={selectedImage} alt="Project Preview" />
+              <img src={selectedImage} alt="Project Preview" loading="lazy" />
               <button
                 className="close-btn"
                 onClick={() => setSelectedImage(null)}

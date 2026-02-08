@@ -69,6 +69,7 @@ export default function Certifications({ showAll = false }) {
                   src={cert.image}
                   alt={cert.title}
                   className="cert-image"
+                  loading="lazy"
                 />
                 <div className="cert-overlay">
                   <span>View Certificate</span>
@@ -125,6 +126,7 @@ export default function Certifications({ showAll = false }) {
                 src={displayedCerts[galleryState.currentIndex].image}
                 alt={`Certificate: ${displayedCerts[galleryState.currentIndex].title}`}
                 className="slideshow-main-image"
+                loading="lazy"
               />
             </div>
             <div className="slideshow-caption">
@@ -148,6 +150,7 @@ export default function Certifications({ showAll = false }) {
                   src={cert.image}
                   alt={`Thumbnail ${idx + 1}`}
                   className={`slideshow-thumb ${idx === galleryState.currentIndex ? 'active' : ''}`}
+                  loading="lazy"
                   onClick={() => goToImage(idx)}
                 />
               ))}

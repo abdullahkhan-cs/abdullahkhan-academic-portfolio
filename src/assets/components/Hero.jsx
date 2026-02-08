@@ -44,7 +44,7 @@ export default function Hero() {
         {/* Hero Image */}
         <div className="hero-image">
           <div className="profile-card">
-            <img src={profileImg} alt="Abdullah portrait" loading="lazy" />
+            <img src={profileImg} alt="Abdullah portrait" loading="eager" />
           </div>
         </div>
       </div>

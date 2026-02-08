@@ -16,7 +16,7 @@ export default function Research({ showAll = false }) {
           {displayedPapers.map((paper, index) => (
             <div className="research-card fade-in" key={index}>
               <div className="research-image-container">
-                <img src={paper.image} alt={paper.title} className="research-image" />
+                <img src={paper.image} alt={paper.title} className="research-image" loading="lazy" />
               </div>
               <div className="research-content">
                 <h3>{paper.title}</h3>

@@ -1,0 +1,6 @@
+# Redirect default Netlify subdomain to custom domain (prevents duplicate content)
+# Replace 'your-site-name' with your actual Netlify subdomain if different
+https://*.netlify.app/* https://abdullahmalokani.netlify.app/:splat 301!
+
+# SPA fallback - serve index.html for all routes
+/*    /index.html   200
