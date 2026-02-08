@@ -23,24 +23,6 @@ const certificationsData = [
         verifyLink: "https://nftp.pitb.gov.pk/",
     },
     {
-        title: "Introduction to Computer Vision",
-        description:
-            "Gained hands-on experience with Computer Vision, approaches to computer vision-pixel intensity histograms, CNN, digital images and pixels-analog to digital images, pixel neighborhood, different tasks in Computer Vision like classification, classification and localization, object detection, instance segmentation",
-        issuer: "Great Learning",
-        year: "2025",
-        image: CV,
-        verifyLink: "https://www.mygreatlearning.com/certificate/IWVBNVVE",
-    },
-    {
-        title: "Google Data Analytics",
-        description:
-            "Professional training in data analysis covering data collection, cleaning, analysis, visualization, spreadsheets, SQL, Tableau, and R to extract insights and support data-driven decisions.",
-        issuer: "Google",
-        year: "2025",
-        image: googleData,
-        verifyLink: "https://coursera.org/verify/professional-cert/14SJCIWS0ECQ",
-    },
-    {
         title: "Meta Front-End Developer Professional Certificate",
         description:
             "Completed a 9-course specialization covering HTML, CSS, JavaScript, React, UX/UI Design, and Coding Interview Preparation.",
@@ -57,6 +39,24 @@ const certificationsData = [
         year: "2023",
         image: python,
         verifyLink: "https://coursera.org/verify/Z2P2SURZSUDX",
+    },
+    {
+        title: "Google Data Analytics",
+        description:
+            "Professional training in data analysis covering data collection, cleaning, analysis, visualization, spreadsheets, SQL, Tableau, and R to extract insights and support data-driven decisions.",
+        issuer: "Google",
+        year: "2025",
+        image: googleData,
+        verifyLink: "https://coursera.org/verify/professional-cert/14SJCIWS0ECQ",
+    },
+    {
+        title: "Introduction to Computer Vision",
+        description:
+            "Gained hands-on experience with Computer Vision, approaches to computer vision-pixel intensity histograms, CNN, digital images and pixels-analog to digital images, pixel neighborhood, different tasks in Computer Vision like classification, classification and localization, object detection, instance segmentation",
+        issuer: "Great Learning",
+        year: "2025",
+        image: CV,
+        verifyLink: "https://www.mygreatlearning.com/certificate/IWVBNVVE",
     },
     {
         title: "Google AI Essentials",
@@ -114,7 +114,7 @@ const certificationsData = [
         image: Abdullah,
         verifyLink: "#",
     },
-     {
+    {
         title: "Web Exhibition",
         description:
             "Provides a forum for researchers, scientists, and professionals to share knowledge and results in areas such as Web Development, Information technology, Artificial intelligence (AI), Data science, Cybersecurity",
