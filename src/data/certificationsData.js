@@ -10,7 +10,7 @@ import aspireLetter from "../assets/images/certs/aspireLetter.jpg";
 import CV from "../assets/images/certs/CV.jpg";
 import csetConference from "../assets/images/csetConference.jpeg";
 import web_cert from "../assets/images/web_cert.jpg";
-import Abdullah from "../assets/images/certs/Abdullah.jpg";
+import Abdullah from "../assets/images/certs/Abdullah.png";
 
 const certificationsData = [
     {
@@ -106,11 +106,11 @@ const certificationsData = [
         verifyLink: "#",
     },
     {
-        title: "Social Media Head, Society of Coders",
+        title: "Technical Team Head, Society of Coders",
         description:
-            "Managed social media presence, created engaging content, and promoted events to enhance the Society of Coders' visibility and engagement.",
-        issuer: "Society of Coders",
-        year: "2026",
+            "Led a 5-member executive committee, organizing 10+ technical events including coding competitions, workshops, and guest lectures for 500+ students.",
+        issuer: "Team Lead QUEST · Nawabshah, Pakistan",
+        year: "2024 – 2026",
         image: Abdullah,
         verifyLink: "#",
     },

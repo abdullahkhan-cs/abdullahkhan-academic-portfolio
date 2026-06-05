@@ -15,7 +15,7 @@ import aspireCert from "../assets/images/certs/aspire.jpg";
 import aspireLetter from "../assets/images/certs/aspireLetter.jpg";
 import profile_mlsa from "../assets/images/profile_mlsa.JPG";
 import pythonCert from "../assets/images/certs/python.jpg";
-import Abdullah from "../assets/images/certs/Abdullah.jpg";
+import Abdullah from "../assets/images/certs/Abdullah.png";
 
 const activitiesData = [
     {
@@ -90,12 +90,12 @@ const activitiesData = [
     },
     {
         title: "Society of Coders",
-        role: "Team Head",
-        organization: "Department of Computer Science",
-        year: "2025",
-        description: "Responsible for managing digital communication, promoting academic and technical activities, and enhancing student engagement through strategic content planning.",
+        role: "Technical Team Head",
+        organization: "Team Lead QUEST",
+        year: "2024 – 2026",
+        description: "Led a 5-member executive committee, organizing 10+ technical events including coding competitions, workshops, and guest lectures for 500+ students.",
         images: [socialHead, Abdullah],
-        location: "Quaid-e-Awam University of Engineering Science and Technology",
+        location: "Nawabshah, Pakistan",
         link: "https://www.linkedin.com/posts/society-of-coder-s_introducing-the-team-of-society-of-coders-activity-7260365100358770688-wFRK?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEIMBa0BgghCpTgM0V8ndhkZMcz-0qPc-PE"
     }
 ];

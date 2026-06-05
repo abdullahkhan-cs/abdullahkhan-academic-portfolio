@@ -2,8 +2,18 @@
 import portfolioImg from "../assets/images/portfolio.JPG";
 import weatherApp from "../assets/images/weatherApp.JPG"
 import SV from "../assets/images/SV.JPG"
+import plantguardnet from "../assets/images/plantguardnet.png";
 
 const projectsData = [
+  {
+    title: "PlantGuardNet: Edge AI for Crop Disease Detection",
+    image: plantguardnet,
+    description:
+      "Developed an AI-powered plant disease detection system using MobileNetV3-Small with CBAM Attention Module for real-time leaf image classification. Achieved 97.4% training accuracy and 90.7% validation accuracy through transfer learning and advanced data augmentation. Built a Flask-based web application with image upload and live camera support for desktop and mobile devices.",
+    tools: ["MobileNetV3", "CBAM Attention", "Flask", "Python", "Transfer Learning"],
+    link: "https://github.com/abdullahkhan-cs/PlantGaurdNet",
+    isInternal: false,
+  },
   {
     title: "Automata-Based Software Vulnerability Detection",
     image: SV,
